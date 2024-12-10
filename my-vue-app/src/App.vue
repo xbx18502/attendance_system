@@ -44,7 +44,7 @@ export default {
     // 获取最新状态数据
     async fetchStatuses() {
       try {
-        const response = await axios.get("http://localhost:3001/api/statuses");
+        const response = await axios.get(`${process.env.VUE_APP_API_BASE_URL}/statuses`);
         this.people = response.data;
       } catch (error) {
         console.error("获取状态失败:", error);
@@ -57,7 +57,7 @@ export default {
       if (newStatus) {
         try {
           // 发送 POST 请求，将新状态添加到数据库
-          const response = await axios.post("http://localhost:3001/api/add-status", {
+          const response = await axios.post(`${process.env.VUE_APP_API_BASE_URL}/add-status`, {
             name,
             status: newStatus,
           });
