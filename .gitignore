@@ -1,0 +1,9 @@
+# Node.js
+my-vue-app/node_modules/
+cloud-sql-api/node_modules/
+node_modules/
+
+# Archives
+*.zip
+
+*.DS_Store
