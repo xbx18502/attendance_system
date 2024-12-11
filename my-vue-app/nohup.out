@@ -26,3 +26,34 @@ Emitted 'error' event on Server instance at:
 Node.js v18.19.1
 服务器已启动: http://localhost:3001
 成功连接到数据库
+服务器已启动: http://localhost:3001
+成功连接到数据库
+node:events:495
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: Packets out of order. Got: 0 Expected: 11
+    at Parser._tryReadPacketHeader (/home/xiao/attendance_system/cloud-sql-api/node_modules/mysql/lib/protocol/Parser.js:470:15)
+    at Parser.write (/home/xiao/attendance_system/cloud-sql-api/node_modules/mysql/lib/protocol/Parser.js:33:29)
+    at Protocol.write (/home/xiao/attendance_system/cloud-sql-api/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/home/xiao/attendance_system/cloud-sql-api/node_modules/mysql/lib/Connection.js:88:28)
+    at Socket.<anonymous> (/home/xiao/attendance_system/cloud-sql-api/node_modules/mysql/lib/Connection.js:526:10)
+    at Socket.emit (node:events:517:28)
+    at addChunk (node:internal/streams/readable:368:12)
+    at readableAddChunk (node:internal/streams/readable:341:9)
+    at Readable.push (node:internal/streams/readable:278:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/xiao/attendance_system/cloud-sql-api/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (node:events:517:28)
+    at Protocol._delegateError (/home/xiao/attendance_system/cloud-sql-api/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleParserError (/home/xiao/attendance_system/cloud-sql-api/node_modules/mysql/lib/protocol/Protocol.js:380:10)
+    at Parser._tryReadPacketHeader (/home/xiao/attendance_system/cloud-sql-api/node_modules/mysql/lib/protocol/Parser.js:478:10)
+    at Parser.write (/home/xiao/attendance_system/cloud-sql-api/node_modules/mysql/lib/protocol/Parser.js:33:29)
+    [... lines matching original stack trace ...]
+    at Socket.emit (node:events:517:28) {
+  code: 'PROTOCOL_PACKETS_OUT_OF_ORDER',
+  fatal: true
+}
+
+Node.js v18.19.1

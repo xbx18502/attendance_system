@@ -2,7 +2,7 @@
 my-vue-app/node_modules/
 cloud-sql-api/node_modules/
 node_modules/
-
+my-vue-app/dist/
 # Archives
 *.zip
 
